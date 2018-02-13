@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            {{ task.title }}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let item of items">
+            <ion-label>{{ item.label }}</ion-label>
+            <ion-checkbox color="dark" (ionChange)="completeItem(item)" [(ngModel)]="item.completed"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+            <button ion-button (click)="addItem()" full large>Add new item</button>
+        </ion-item>
+    </ion-list>
+</ion-content>
