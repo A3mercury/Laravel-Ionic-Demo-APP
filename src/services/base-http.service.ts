@@ -1,5 +1,7 @@
 import { Response } from '@angular/http';
 
+import 'rxjs/add/operator/map';
+
 export class BaseHttpService {
 
     protected parseResponse(response) {
