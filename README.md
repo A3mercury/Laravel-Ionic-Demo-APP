@@ -32,19 +32,6 @@ get(): Promise<any> {
 }
 ``` 
 
-#### home.html
-```
-<ion-buttons end>
-    <button ion-button icon-only (click)="addTask()">
-        <ion-icon name="add"></ion-icon>
-    </button>
-</ion-buttons>
-    
-...
-    
-<ion-checkbox color="dark" (ionChange)="complete(task)" [ngModel]="task.completed"></ion-checkbox>
-```
-
 #### home.ts
 ```
 constructor(
@@ -69,6 +56,19 @@ private getTasks() {
             console.log(err);
         });
 }
+```
+
+#### home.html
+```
+<ion-buttons end>
+    <button ion-button icon-only (click)="addTask()">
+        <ion-icon name="add"></ion-icon>
+    </button>
+</ion-buttons>
+    
+...
+    
+<ion-checkbox color="dark" (ionChange)="complete(task)" [ngModel]="task.completed"></ion-checkbox>
 ```
 
 #### tasks.service.ts
